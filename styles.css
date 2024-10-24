@@ -54,54 +54,204 @@ main {
     margin: 0 auto;
 }
 
-/* Events List */
-.events-list h1 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #333;
+/********************************************
+/* Ongoing Events Holder
+********************************************/
+
+.ongoing-events-holder {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.event-featured,
-.event-small {
-    background-color: white;
+.ongoing-event-holder {
+    width: 300px;
+    background-color: #ecf5fe;
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.event-featured:hover,
-.event-small:hover {
+.ongoing-event-holder:hover {
     transform: translateY(-5px);
 }
 
-.event-header h2 {
-    font-size: 24px;
-    color: #d5dcfd;
+.ongoing-event .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.event-header a {
-    text-decoration: none;
-    color: #d4e4fb;
+.ongoing-event .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
-.event-header a:hover {
-    text-decoration: underline;
+.ongoing-event .table-holder {
+    flex: 1;
 }
 
-.event-header p {
+.ongoing-event .event-name-col {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.ongoing-event .eventDetails {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.top-team-logos img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/********************************************
+/* Upcoming Events Holder 
+********************************************/
+
+.upcoming-events {
+    margin-top: 20px;
+}
+
+/* Event Card Styling */
+.small-event {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.small-event:hover {
+    transform: translateY(-5px);
+}
+
+.event-logo-container {
+    flex-shrink: 0;
+}
+
+.event-logo-container .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Table inside event cards */
+.table-holder {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table .col-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.table .event-col .text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table .col-desc {
     font-size: 14px;
     color: #666;
 }
 
-.event-details p {
-    font-size: 16px;
-    color: #444;
+.eventDetails .smallCountry {
+    display: flex;
+    align-items: center;
 }
 
-/* Event Detail Page */
+.eventDetails .smallCountry img.flag {
+    margin-right: 5px;
+    width: 20px;
+    height: 15px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .small-event {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .event-logo-container {
+        margin-bottom: 10px;
+    }
+
+    .table {
+        display: block;
+    }
+
+    .table .col-value,
+    .table .col-desc {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* General Styles for Events Section */
+.events-list h1 {
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.a-reset {
+    text-decoration: none;
+}
+
+.standard-box {
+    background-color: #b9c2ce;
+    /* color for the background */
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.standard-box:hover {
+    transform: translateY(-5px);
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ongoing-events-holder {
+        display: block;
+    }
+
+    .ongoing-event-holder {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/********************************************
+/* Event Detail Page
+********************************************/
+
 .event-header {
     background-color: #98a0c6;
     color: white;
@@ -215,5 +365,78 @@ footer {
 
     .navbar li {
         margin-bottom: 10px;
+    }
+}
+
+/********************************************
+/* Event Detail Page
+********************************************/
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-info {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+
+.about-photos {
+    flex: 1;
+}
+
+.photo-card {
+    margin-bottom: 20px;
+}
+
+.photo-box {
+    width: 200px;
+    height: 150px;
+    background-color: #d5dcfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #555;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.about-description {
+    flex: 2;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.about-description h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #0066cc;
+}
+
+/* Footer for About Us */
+footer {
+    margin-top: 40px;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design for About Us Page */
+@media (max-width: 768px) {
+    .about-info {
+        flex-direction: column;
+    }
+
+    .about-description,
+    .about-photos {
+        width: 100%;
     }
 }
