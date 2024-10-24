@@ -12,7 +12,7 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="logo-EACC.png" alt="EACC Logo">
+            <img src="logos/logo-EACC.png" alt="EACC Logo">
         </div>
         <nav>
             <ul class="navbar">
@@ -27,83 +27,201 @@
 
     <!-- Main Content -->
     <main>
-        <section class="events-list">
+        <section class="events-list ongoing-events">
             <h1>Ongoing Events</h1>
 
-            <!-- Featured Events -->
-            <div class="event-featured">
-                <div class="event-header">
-                    <h2><a href="event-details-ASP2024.html">After School Program 2024</a></h2>
-                    <p>August 26th | Community Center</p>
+            <!-- Ongoing Events - Display in a grid with logos -->
+            <div class="ongoing-events-holder">
+                <!-- Event 1 -->
+                <div class="ongoing-event-holder">
+                    <a href="event-details-ASP2024.html" class="a-reset ongoing-event">
+                        <div class="content standard-box">
+                            <img alt="After School Program" src="logos/ASP.png" class="logo">
+                            <div class="table-holder">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="event-name-col" colspan="2">
+                                                <div class="event-name-small">
+                                                    <div class="text-ellipsis">After School Program</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="eventDetails">
+                                            <td><span class="col-desc">Aug 26th - Dec 31th</span></td>
+                                            <td>
+                                                <div class="top-team-logos"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="event-details">
-                    <p>Participants: K-8 Grade</p>
-                    <p>Registration Fee: Free</p>
-                </div>
-            </div>
 
-            <div class="event-featured">
-                <div class="event-header">
-                    <h2><a href="event-details.html">Basketball Program</a></h2>
-                    <p>October 30th - November 5th | Local Gym</p>
+                <!-- Event 2 -->
+                <div class="ongoing-event-holder">
+                    <a href="event-details.html" class="a-reset ongoing-event">
+                        <div class="content standard-box">
+                            <img alt="Basketball Program" src="logos/BasketballP.png" class="logo">
+                            <div class="table-holder">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="event-name-col" colspan="2">
+                                                <div class="event-name-small">
+                                                    <div class="text-ellipsis">Basketball Program</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="eventDetails">
+                                            <td><span class="col-desc">Oct 20th - Nov 5th</span></td>
+                                            <td>
+                                                <div class="top-team-logos"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="event-details">
-                    <p>Participants: Ages 6 to 18</p>
-                    <p>Registration Fee: $60.00</p>
-                </div>
-            </div>
 
-            <div class="event-small">
-                <div class="event-header">
-                    <h2><a href="event-details.html">Soccer Program</a></h2>
-                    <p>December 15th - December 20th | Local Gym</p>
+                <!-- Event 3 -->
+                <div class="ongoing-event-holder">
+                    <a href="event-details.html" class="a-reset ongoing-event">
+                        <div class="content standard-box">
+                            <img alt="Soccer Program" src="logos/SoccerP.png" class="logo">
+                            <div class="table-holder">
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="event-name-col" colspan="2">
+                                                <div class="event-name-small">
+                                                    <div class="text-ellipsis">Soccer Program</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="eventDetails">
+                                            <td><span class="col-desc">Oct 10th - Dec 20th</span></td>
+                                            <td>
+                                                <div class="top-team-logos"></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="event-details">
-                    <p>Participants: Volunteers</p>
-                    <p>Registration Fee: $15.00</p>
-                </div>
-            </div>
 
-            <h1>Upcoming Events</h1>
-            <!-- Smaller Events -->
-            <div class="event-small">
-                <div class="event-header">
-                    <h2><a href="event-details.html">Free English Speaking Class</a></h2>
-                    <p>Sep. 24th - Nov. 19th | Community Center</p>
-                </div>
-                <div class="event-details">
-                    <p>Participants: All Children</p>
-                    <p>Registration Fee: Free</p>
-                </div>
-            </div>
 
-            <div class="event-small">
-                <div class="event-header">
-                    <h2><a href="event-details.html">Casino Night Gala</a></h2>
-                    <p>TBD | Community Center</p>
-                </div>
-                <div class="event-details">
-                    <p>Participants: TBD</p>
-                    <p>Registration Fee: Free</p>
-                </div>
-            </div>
 
-            <div class="event-small">
-                <div class="event-header">
-                    <h2><a href="event-details.html">Bingo</a></h2>
-                    <p>Every Friday | TBD</p>
-                </div>
-                <div class="event-details">
-                    <p>Participants: TBD</p>
-                    <p>Registration Fee: Free</p>
-                </div>
+
             </div>
         </section>
+
+        <section class="events-list upcoming-events">
+            <h1>Upcoming Events</h1>
+
+            <!-- Event 1 -->
+            <a href="event-details.html" class="a-reset small-event standard-box">
+                <div class="event-logo-container">
+                    <img alt="Free English Speaking Class" src="logos/FESCP.png" class="logo">
+                </div>
+                <div class="table-holder">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="col-value event-col">
+                                    <div class="text-ellipsis">Free English Speaking Class</div>
+                                </td>
+                                <td class="col-value small-col">All Children</td>
+                                <td class="col-value small-col prizePoolEllipsis">Free</td>
+                                <td class="col-value small-col gtSmartphone-only">Community Center</td>
+                            </tr>
+                            <tr class="eventDetails">
+                                <td><span class="smallCountry">Easton, PA | Community Center </span><span
+                                        class="col-desc">Sep. 24 - Nov.
+                                        19</span></td>
+                                <td class="col-desc">Participants: All Children</td>
+                                <td class="col-desc">Registration Fee: Free</td>
+                                <td class="col-desc gtSmartphone-only"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </a>
+
+            <!-- Event 2 -->
+            <a href="event-details.html" class="a-reset small-event standard-box">
+                <div class="event-logo-container">
+                    <img alt="Casino Night Gala" src="logos/CasinoP.png" class="logo">
+                </div>
+                <div class="table-holder">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="col-value event-col">
+                                    <div class="text-ellipsis">Casino Night Gala</div>
+                                </td>
+                                <td class="col-value small-col">Open to All</td>
+                                <td class="col-value small-col prizePoolEllipsis">Free</td>
+                                <td class="col-value small-col gtSmartphone-only">TBD</td>
+                            </tr>
+                            <tr class="eventDetails">
+                                <td><span class="smallCountry">Easton, PA | TBD </span><span class="col-desc">TBD</span>
+                                </td>
+                                <td class="col-desc">Participants: TBD</td>
+                                <td class="col-desc">Registration Fee: Free</td>
+                                <td class="col-desc gtSmartphone-only"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </a>
+
+            <!-- Event 3 -->
+            <a href="event-details.html" class="a-reset small-event standard-box">
+                <div class="event-logo-container">
+                    <img alt="Bingo" src="logos/BingoP.jpeg" class="logo">
+                </div>
+                <div class="table-holder">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="col-value event-col">
+                                    <div class="text-ellipsis">Bingo</div>
+                                </td>
+                                <td class="col-value small-col">Open to All</td>
+                                <td class="col-value small-col prizePoolEllipsis">Free</td>
+                                <td class="col-value small-col gtSmartphone-only">Local Field</td>
+                            </tr>
+                            <tr class="eventDetails">
+                                <td><span class="smallCountry">Easton, PA | TBD </span><span class="col-desc">TBD</span>
+                                </td>
+                                <td class="col-desc">Participants: Open to All</td>
+                                <td class="col-desc">Registration Fee: Free</td>
+                                <td class="col-desc gtSmartphone-only"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </a>
+
     </main>
+
+
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Easton Area Community Center. All rights reserved.</p>
+        <div class="contact-info"></div>
+        <p>CONTACT WITH US:</p>
+        <a href="tel:+16102538271">610-253-8271</a> |
+        <a href="mailto:eaccinfo@eacc.org">eaccinfo@eacc.org</a>
+        </div>
     </footer>
 </body>
 
