@@ -60,7 +60,7 @@ main {
 /* Slideshow Container */
 .slideshow-container {
     position: relative;
-    max-width: 1000px; 
+    max-width: 1200px; 
     height: 300px;     
     margin: 20px auto;
     overflow: hidden;
