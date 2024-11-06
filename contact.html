@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - EACC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logos/logo-EACC.png" alt="EACC Logo">
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="news-sports.html">News & Sport</a></li>
+                <li><a href="events.html">Events & Programs</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="account.html">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <!-- Sidebar Navigation -->
+        <aside class="contact-sidebar">
+            <ul>
+                <li><a href="#" onclick="showContactSection('contact-info')" class="active">Contact Info</a></li>
+                <li><a href="#" onclick="showContactSection('directions')">Directions</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contact Content -->
+        <div class="contact-content">
+            <!-- Contact Info Section -->
+            <section id="contact-info" class="contact-section">
+                <div class="contact-header standard-box">
+                    <h1>Contact Us</h1>
+                    <h2>Easton Area Community Center</h2>
+                </div>
+
+                <div class="contact-details">
+                    <div class="info-block">
+                        <h3>Contact Information</h3>
+                        <p><strong>Address:</strong> 901 Washington Street</p>
+                        <p>Easton, PA. 18042</p>
+                        <p><strong>Phone:</strong> <a href="tel:+16102538271">610-253-8271</a></p>
+                        <p><strong>Fax:</strong> 610-253-5897</p>
+                        <p><strong>Email:</strong> <a href="mailto:eaccinfo@eaccpa.org">eaccinfo@eaccpa.org</a></p>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send us a message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name: *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail address: *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message: *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Directions Section -->
+            <section id="directions" class="contact-section" style="display: none;">
+                <div class="contact-header standard-box">
+                    <h1>How to Find Us</h1>
+                </div>
+
+                <div class="directions-content">
+                    <div class="map-container">
+                        <!-- Placeholder for map -->
+                        <div class="map-placeholder standard-box">
+                            <p>Interactive Map</p>
+                            <p>901 Washington Street, Easton, PA. 18042</p>
+                        </div>
+                    </div>
+
+                    <div class="directions-details">
+                        <h3>Directions to EACC</h3>
+                        <div class="directions-block">
+                            <h4>From Route 22:</h4>
+                            <ol>
+                                <li>Take the 13th Street exit</li>
+                                <li>Follow 13th Street south</li>
+                                <li>Turn right onto Washington Street</li>
+                                <li>EACC will be on your right</li>
+                            </ol>
+                        </div>
+                        <div class="directions-block">
+                            <h4>Public Transportation:</h4>
+                            <p>LANTA Bus Route 216 stops directly in front of our facility.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Easton Area Community Center. All rights reserved.</p>
+        <div class="contact-info">
+            <p>CONTACT WITH US:</p>
+            <a href="tel:+16102538271">610-253-8271</a> |
+            <a href="mailto:eaccinfo@eacc.org">eaccinfo@eacc.org</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -71,3 +71,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function showContactSection(sectionId) {
+    // Remove active class from all sidebar links
+    document.querySelectorAll('.contact-sidebar a').forEach(link => {
+        link.classList.remove('active');
+    });
+    
+    // Add active class to clicked link
+    event.target.classList.add('active');
+    
+    // Hide all sections
+    document.querySelectorAll('.contact-section').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+}
