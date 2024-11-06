@@ -51,6 +51,34 @@ def login():
     
     return jsonify(response)
 
+# get user data
+@app.route('/api/user', methods=['GET'])
+def get_user():
+
+    user_id = request.headers.get('User-ID')
+    if not user_id:
+        return jsonify({"error": "User not logged in"}), 401
+
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT username, email, created_at, phone FROM Users WHERE user_id = ?", (user_id,))
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        user_data = {
+            "username": user[0],
+            "email": user[1],
+            "join_date": user[2],
+            "contact_number": user[3] if user[3] else "N/A"
+        }
+        return jsonify(user_data)
+    else:
+        return jsonify({"error": "User not found"}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 # add users
 @app.route('/api/users', methods=['POST'])
 def add_user():
