@@ -76,7 +76,8 @@ main {
     width: 100%;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -100,7 +101,8 @@ main {
     left: 10px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -113,7 +115,8 @@ main {
     padding: 20px;
 }
 
-.news-column, .events-column {
+.news-column,
+.events-column {
     width: 45%;
     background-color: #f4f4f4;
     padding: 20px;
@@ -121,13 +124,15 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.news-column h2, .events-column h2 {
+.news-column h2,
+.events-column h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
 }
 
-.news-item, .event-item {
+.news-item,
+.event-item {
     background-color: #fff;
     margin: 10px 0;
     padding: 10px;
@@ -157,6 +162,7 @@ main {
 .donate-button:hover {
     background-color: #ff8533;
 }
+
 /********************************************
 /* Ongoing Events Holder
 ********************************************/
@@ -661,6 +667,104 @@ footer {
 }
 
 /********************************************
+/* login / signup page
+********************************************/
+
+/* auth container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+}
+
+/* auth form styling */
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* submit button */
+.auth-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7089a2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.auth-form button:hover {
+    background-color: #005bb5;
+}
+
+.auth-form p {
+    margin-top: 15px;
+    color: #333;
+    font-size: 14px;
+}
+
+.auth-form a {
+    color: #005bb5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form a:hover {
+    text-decoration: underline;
+}
+
+/* responsive for smaller screens */
+@media (max-width: 480px) {
+    .auth-form {
+        padding: 20px;
+    }
+
+    .auth-form h2 {
+        font-size: 20px;
+    }
+
+    .auth-form button {
+        font-size: 14px;
+    }
+}
+
+/********************************************
 /* My Account page sepcific Styling
 ********************************************/
 /* Account Page */
@@ -698,12 +802,14 @@ footer {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center-align content */
+    text-align: center;
+    /* Center-align content */
 }
 
 .profile-photo {
     display: flex;
-    justify-content: center; /* Center profile photo */
+    justify-content: center;
+    /* Center profile photo */
     margin-bottom: 15px;
 }
 
@@ -1032,7 +1138,7 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .footer-donate img {
         height: 60px;
     }
