@@ -102,3 +102,42 @@ function checkLoginStatus() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", async function () {
+    const userId = localStorage.getItem("userId"); // Assume userId is stored in localStorage after login
+
+    if (!userId) {
+        console.error("User not logged in. Redirecting to login page.");
+        window.location.href = "login.html";
+        return;
+    }
+
+    try {
+        const response = await fetch("http://127.0.0.1:5000/api/user", {
+            method: "GET",
+            headers: {
+                "User-ID": userId, // Send user ID in headers
+                "Content-Type": "application/json"
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Failed to fetch user data: ${response.statusText}`);
+        }
+
+        const userData = await response.json();
+
+        // Log fetched user data to verify
+        console.log("Fetched user data:", userData);
+
+        // Populate user details in the account info section
+        document.getElementById("user-full-name").textContent = userData.username;
+        document.getElementById("user-join-date").textContent = new Date(userData.join_date).toLocaleDateString();
+        document.getElementById("user-email").textContent = userData.email;
+        document.getElementById("user-contact-number").textContent = userData.contact_number || "N/A";
+    } catch (error) {
+        console.error("Error fetching user data:", error);
+        alert("Could not load user data. Please try again.");
+        window.location.href = "login.html"; // Redirect to login on failure
+    }
+});
+
