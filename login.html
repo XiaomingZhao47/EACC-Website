@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - EACC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="login.js"></script>
+</head>
+
+<body>
+
+    <a href="home.html" class="close-button" title="Back to Home">&times;</a>
+
+    <div class="auth-container">
+        <!-- login form -->
+        <div id="login-form" class="auth-form">
+            <h2>Login to EACC</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up here</a></p>
+        </div>
+
+        <!-- signup form -->
+        <div id="signup-form" class="auth-form" style="display: none;">
+            <h2>Sign Up for EACC</h2>
+            <form onsubmit="handleSignup(event)">
+                <label for="signup-name">Full Name:</label>
+                <input type="text" id="signup-name" required>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" required>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>
