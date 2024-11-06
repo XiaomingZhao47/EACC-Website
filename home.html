@@ -27,38 +27,88 @@
         </nav>
     </header>
 
-    <!-- Slideshow Container -->
-    <section class="slideshow-container"></section>
-        <div class="slide"></div>
-            <img src="logos/placehold.png" alt="Slide 1">
-    
-        </div>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Slideshow Container -->
+        <section class="slideshow-container">
+            <div class="slide">
+                <img src="logos/placehold.png" alt="Slide 1">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </section>
 
-    <!-- News and Events Section -->
-    <section class="news-events">
-        <div class="news-column">
-            <h2>Latest News</h2>
-            <!-- Example News Items -->
-            <div class="news-item">News Item 1</div>
-            <div class="news-item">News Item 2</div>
-            <div class="news-item">News Item 3</div>
-        </div>
-        <div class="events-column">
-            <h2>Upcoming Events</h2>
-            <!-- Example Events -->
-            <div class="event-item">Event Item 1</div>
-            <div class="event-item">Event Item 2</div>
-            <div class="event-item">Event Item 3</div>
-        </div>
-    </section>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1>Welcome to Easton Area Community Center</h1>
+            <p>Our after-school programs, athletics and senior programs are open for registration.</p>
+            <p>Please contact us at 610-253-8271 for more information.</p>
+            <p>We look forward to seeing you</p>
+        </section>
 
-    <!-- Donate Button -->
-    <div class="donate-container">
-        <button class="donate-button">Donate</button>
-    </div>
+        <!-- Program Grid -->
+        <section class="programs-grid">
+            <!-- Program 1 - After School Program -->
+            <div class="program-holder">
+                <a href="event-details-ASP2024.html" class="program-link">
+                    <div class="content standard-box">
+                        <img src="logos/home1.jpg" alt="After School Program" class="program-img">
+                        <div class="program-title">After School / Summer Camp</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Program 2 - Cops n Kids (External Link) -->
+            <div class="program-holder">
+                <a href="https://copsnkidseaston.org/" target="_blank" class="program-link">
+                    <div class="content standard-box">
+                        <img src="logos/home2.jpg" alt="Cops n Kids" class="program-img">
+                        <div class="program-title">Cops n Kids</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Program 3 - Athletics -->
+            <div class="program-holder">
+                <a href="events.html" class="program-link">
+                    <div class="content standard-box">
+                        <img src="logos/home3.jpg" alt="Athletics" class="program-img">
+                        <div class="program-title">Athletics</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Program 4 - Silver Connections (Placeholder) -->
+            <div class="program-holder">
+                <a href="#" class="program-link">
+                    <div class="content standard-box">
+                        <img src="logos/home4.jpg" alt="Silver Connections" class="program-img">
+                        <div class="program-title">Silver Connections</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Program 5 - Events -->
+            <div class="program-holder">
+                <a href="event.html" class="program-link">
+                    <div class="content standard-box">
+                        <img src="logos/home5.jpg" alt="Events" class="program-img">
+                        <div class="program-title">Events</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Program 6 - Partners (Placeholder) -->
+            <div class="program-holder">
+                <a href="#" class="program-link">
+                    <div class="content standard-box">
+                        <img src="logos/home6.jpg" alt="Partners" class="program-img">
+                        <div class="program-title">Partners</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -80,6 +130,6 @@
             </div>
         </div>
     </footer>
-    
 </body>
+
 </html>
