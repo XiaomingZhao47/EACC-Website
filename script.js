@@ -25,3 +25,49 @@ function changeSlide(n) {
     slideIndex += n;
     showSlides();
 }
+
+// Payment related functions
+function showPaymentForm() {
+    const form = document.getElementById('payment-form');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+function handlePaymentSubmit(event) {
+    event.preventDefault();
+    // Add payment processing logic here
+    alert('Payment method added successfully!');
+    document.getElementById('payment-form').style.display = 'none';
+}
+
+// Add input formatting for payment fields
+document.addEventListener('DOMContentLoaded', function() {
+    // Format card number input
+    const cardInput = document.getElementById('cardNumber');
+    if (cardInput) {
+        cardInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            e.target.value = value;
+        });
+    }
+
+    // Format expiry date input
+    const expiryInput = document.getElementById('expiryDate');
+    if (expiryInput) {
+        expiryInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0,2) + '/' + value.slice(2);
+            }
+            e.target.value = value;
+        });
+    }
+
+    // Format CVV input
+    const cvvInput = document.getElementById('cvv');
+    if (cvvInput) {
+        cvvInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            e.target.value = value;
+        });
+    }
+});

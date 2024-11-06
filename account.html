@@ -52,6 +52,8 @@
             <p>Email: [user@example.com]</p>
             <p>Contact Number: [User’s Contact Number]</p>
         </section>
+            
+        <!-- Section: Personal Info -->
         <section id="personal-info" class="account-section" style="display: none;">
             <h3>Personal Information</h3>
             <form>
@@ -63,6 +65,30 @@
                 <input type="text" id="address" name="address">
                 <button type="submit">Save Changes</button>
             </form>
+        </section>
+
+        <!-- Section: Payment -->
+        <section id="payment" class="account-section" style="display: none;">
+            <div class="payment-methods-section">
+                <h3>Payment Methods</h3>
+                <div id="payment-methods-list">
+                    <p class="no-payment-info">No payment information available</p>
+                </div>
+                <button onclick="showPaymentForm()" class="add-payment-btn">Add Payment Method</button>
+            </div>
+
+            <div id="payment-form" class="payment-form" style="display: none;">
+                <h3>Add New Payment Method</h3>
+                <form onsubmit="handlePaymentSubmit(event)">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" maxlength="16">
+                    <label for="expiryDate">Expiration Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" maxlength="3">
+                    <button type="submit">Save Changes</button>
+                </form>
+            </div>
         </section>
 
     </main>

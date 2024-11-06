@@ -728,3 +728,46 @@ footer {
 .faq-section ul li {
     margin: 10px 0;
 }
+
+/* Payment Section Styles */
+.payment-methods-section {
+    margin-bottom: 20px;
+}
+
+.no-payment-info {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.add-payment-btn {
+    background-color: #7089a2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-payment-btn:hover {
+    background-color: #005bb5;
+}
+
+.payment-form {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Keep your existing account-section styles */
+.account-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
