@@ -660,6 +660,9 @@ footer {
     }
 }
 
+/********************************************
+/* My Account page sepcific Styling
+********************************************/
 /* Account Page */
 .account-container {
     display: flex;
@@ -772,6 +775,9 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/********************************************
+/* Contact Us page specific styling
+********************************************/
 /* Contact Page Styles */
 .contact-container {
     display: flex;
@@ -971,6 +977,9 @@ footer {
     }
 }
 
+/********************************************
+/* add donate to the footer
+********************************************/
 /* Footer Styles */
 footer {
     background-color: #646464;
