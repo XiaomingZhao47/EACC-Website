@@ -23,6 +23,7 @@ async function handleLogin(event) {
     const result = await response.json();
     if (result.success) {
         localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userId", result.user_id);
         alert("Login successful!");
         window.location.href = "account.html";
     } else {

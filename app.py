@@ -51,26 +51,24 @@ def login():
     
     return jsonify(response)
 
-# get user data
+#  get user data
 @app.route('/api/user', methods=['GET'])
 def get_user():
-
+    # Assuming the user ID is sent as a header or from a session
     user_id = request.headers.get('User-ID')
     if not user_id:
         return jsonify({"error": "User not logged in"}), 401
 
     conn = connect_db()
     cursor = conn.cursor()
-    cursor.execute("SELECT username, email, created_at, phone FROM Users WHERE user_id = ?", (user_id,))
+    cursor.execute("SELECT username, email FROM Users WHERE user_id = ?", (user_id,))
     user = cursor.fetchone()
     conn.close()
 
     if user:
         user_data = {
             "username": user[0],
-            "email": user[1],
-            "join_date": user[2],
-            "contact_number": user[3] if user[3] else "N/A"
+            "email": user[1]
         }
         return jsonify(user_data)
     else:
