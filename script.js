@@ -90,7 +90,18 @@ function showContactSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
 }
 
+function logout() {
+    localStorage.removeItem("userId");
+    localStorage.removeItem("isLoggedIn");
+
+    const userId = localStorage.getItem("userId");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    window.location.href = "home.html";
+}
+
 function checkLoginStatus() {
+
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (isLoggedIn === "true") {
