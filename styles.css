@@ -23,7 +23,7 @@ header {
 }
 
 .logo img {
-    width: 120px;
+    width: 180px; /* Increased from 120px */
 }
 
 .navbar {
@@ -47,6 +47,7 @@ header {
     border-radius: 5px;
 }
 
+
 /* Main Content */
 main {
     padding: 20px;
@@ -63,7 +64,7 @@ main {
     max-width: 1200px; 
     height: 300px;     
     margin: 20px auto;
-    overflow: hidden;
+    overflow: hidden;  
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -1388,5 +1389,78 @@ footer {
 
     .main-article h1 {
         font-size: 24px;
+    }
+}
+
+/********************************************
+/* Footer Styling
+********************************************/
+footer {
+    background-color: #646464; /* Footer background */
+    color: #ffffff; /* Text color */
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Stacks donate and contact info for responsiveness */
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-donate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-donate img {
+    height: 80px; /* Adjust logo height */
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-donate img:hover {
+    transform: translateY(-2px);
+}
+
+.footer-info {
+    font-size: 14px; /* Footer text size */
+    text-align: center;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-sections {
+        flex-direction: column; /* Ensure proper stacking on smaller screens */
+        gap: 10px;
+    }
+
+    .footer-donate img {
+        height: 60px; /* Resize for mobile */
     }
 }
