@@ -403,6 +403,198 @@ main {
 }
 
 /********************************************
+/* About Us Page
+********************************************/
+/* About Photos Section Styling */
+.about-photos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo-card {
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.photo-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    z-index: 2; /* Ensure link is above the box but below text */
+}
+
+.photo-box {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #ecf5fe;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.photo-card:hover .photo-box::before {
+    opacity: 1;
+}
+
+.photo-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 3; /* Ensure text stays on top */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-photos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .photo-box {
+        height: 180px;
+    }
+}
+/* About Description Section Styling */
+.about-description {
+    flex: 2;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Organization Name Styling */
+.about-description strong {
+    color: #7089a2;
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Contact Information Block */
+.about-description p:nth-child(2) {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.about-description p:nth-child(2) a {
+    color: #7089a2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.about-description p:nth-child(2) a:hover {
+    color: #005bb5;
+}
+
+/* Mission Section Styling */
+.about-description h2 {
+    color: #333;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #7089a2;
+}
+
+/* General Text Styling */
+.about-description p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Purpose List Styling */
+.about-description p:last-child {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Purpose Items */
+.about-description p:last-child br {
+    content: "";
+    display: block;
+    margin: 10px 0;
+}
+
+.about-description p:last-child {
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Add bullet points to purpose items */
+.about-description p:last-child br + text {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+
+.about-description p:last-child br + text::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #7089a2;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .about-description {
+        padding: 20px;
+    }
+
+    .about-description strong {
+        font-size: 20px;
+    }
+
+    .about-description h2 {
+        font-size: 20px;
+    }
+
+    .about-description p {
+        font-size: 15px;
+    }
+}
+
+/********************************************
 /* Event Detail Page
 ********************************************/
 
