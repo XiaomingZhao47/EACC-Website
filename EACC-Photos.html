@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EACC Photos - EACC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logos/logo-EACC.png" alt="EACC Logo">
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="news-sports.html">News & Sport</a></li>
+                <li><a href="events.html">Events & Programs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#" onclick="checkLoginStatus()">My Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="photos-container">
+        <!-- Sidebar Navigation -->
+        <aside class="photos-sidebar">
+            <ul>
+                <li><a href="#" onclick="showPhotoSection('after-school')" class="active">After School</a></li>
+                <li><a href="#" onclick="showPhotoSection('seniors')">Seniors</a></li>
+                <li><a href="#" onclick="showPhotoSection('sports')">Sports</a></li>
+                <li><a href="#" onclick="showPhotoSection('summer-camp')">Summer Camp</a></li>
+            </ul>
+        </aside>
+
+        <!-- Photos Content -->
+        <div class="photos-content">
+            <!-- After School Section -->
+            <section id="after-school" class="photos-section">
+                <div class="photos-header standard-box">
+                    <h1>After School Program</h1>
+                    <h2>Educational & Recreational Activities</h2>
+                </div>
+            
+                <div class="photos-grid">
+                    <div class="photo-item">
+                        <img src="ASchool/music3.jpg" alt="After school music activity" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="ASchool/music.jpg" alt="Music program" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="ASchool/school2.jpg" alt="After school program" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="ASchool/school4.jpg" alt="School activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="ASchool/school6.jpg" alt="Student activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="ASchool/school.jpg" alt="School program" class="photo-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seniors Section -->
+            <section id="seniors" class="photos-section" style="display: none;">
+                <div class="photos-header standard-box">
+                    <h1>Seniors Program</h1>
+                    <h2>Community & Activities</h2>
+                </div>
+            
+                <div class="photos-grid">
+                    <div class="photo-item">
+                        <img src="Seniors/senday.jpg" alt="Senior day activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Seniors/seniorday2.jpg" alt="Senior day event" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Seniors/seniorparty3.jpg" alt="Senior party celebration" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Seniors/seniors6.jpg" alt="Seniors group activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Seniors/seniors.jpg" alt="Seniors program" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Seniors/seniors3.jpg" alt="Senior activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Seniors/seniors5.jpg" alt="Senior community event" class="photo-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sports Section -->
+            <section id="sports" class="photos-section" style="display: none;">
+                <div class="photos-header standard-box">
+                    <h1>Sports Programs</h1>
+                    <h2>Athletics & Team Activities</h2>
+                </div>
+            
+                <div class="photos-grid">
+                    <div class="photo-item">
+                        <img src="Sports/athletics.jpg" alt="Athletics activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/basketball11.jpg" alt="Basketball game" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/basketball2.jpg" alt="Basketball practice" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/basketball3.jpg" alt="Basketball team" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/basketballyoung2.jpg" alt="Youth basketball" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/basketballyounger.jpg" alt="Young basketball players" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/basketball.jpg" alt="Basketball program" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/cheerleaders.jpg" alt="Cheerleaders" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/wrestlerchamps.jpg" alt="Wrestling champions" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/wrestlingaction.jpg" alt="Wrestling match" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/Wrestlingbanquet1.jpg" alt="Wrestling banquet" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/Wrestlingbanquet2.jpg" alt="Wrestling awards ceremony" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="Sports/wrestlingchamp.jpg" alt="Wrestling champion" class="photo-image">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summer Camp Section -->
+            <section id="summer-camp" class="photos-section" style="display: none;">
+                <div class="photos-header standard-box">
+                    <h1>Summer Camp</h1>
+                    <h2>Summer Activities & Fun</h2>
+                </div>
+            
+                <div class="photos-grid">
+                    <div class="photo-item">
+                        <img src="SumCamp/bryce.png" alt="Bryce summer camp activity" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="SumCamp/fieldtrips.png" alt="Summer camp field trips" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="SumCamp/harambee.jpg" alt="Harambee activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="SumCamp/IMG1.jpg" alt="Summer camp activities" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="SumCamp/summercamp.png" alt="Summer camp program" class="photo-image">
+                    </div>
+                    <div class="photo-item">
+                        <img src="SumCamp/thankyou.jpg" alt="Summer camp thank you" class="photo-image">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-donate">
+                    <a href="https://eaccpa.dppro.net/give" target="_blank">
+                        <img src="logos/donate.png" alt="Donate" class="donate-img">
+                    </a>
+                    <p>Support our mission by donating!</p>
+                </div>
+
+                <div class="footer-info">
+                    <p>&copy; 2024 Easton Area Community Center. All rights reserved.</p>
+                    <div class="contact-info">
+                        <p>CONTACT WITH US:</p>
+                        <a href="tel:+16102538271">610-253-8271</a> |
+                        <a href="mailto:eaccinfo@eacc.org">eaccinfo@eacc.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -163,4 +163,57 @@ function loadUserData() {
         });
 }
 
+// Function to handle section visibility in photos page
+function showPhotoSection(sectionId) {
+    // For debugging
+    console.log('Showing section:', sectionId);
 
+    // Remove active class from all sidebar links
+    document.querySelectorAll('.photos-sidebar a').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add active class to clicked link
+    event.target.classList.add('active');
+
+    // Hide all sections first
+    document.querySelectorAll('.photos-section').forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Show the selected section
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+        // Force a reflow to ensure images are displayed
+        selectedSection.offsetHeight;
+    } else {
+        console.error('Section not found:', sectionId);
+    }
+}
+
+// Initialize the page with the first section visible
+document.addEventListener('DOMContentLoaded', function() {
+    // Show After School section by default
+    showPhotoSection('after-school');
+    
+    // Add click event listeners to all sidebar links
+    document.querySelectorAll('.photos-sidebar a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sectionId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            showPhotoSection(sectionId);
+        });
+    });
+
+    // Log when images are loaded or fail to load
+    document.querySelectorAll('.photo-image').forEach(img => {
+        img.addEventListener('load', () => {
+            console.log('Image loaded:', img.src);
+        });
+        
+        img.addEventListener('error', () => {
+            console.log('Image failed to load:', img.src);
+        });
+    });
+});
