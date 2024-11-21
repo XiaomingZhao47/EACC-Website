@@ -23,7 +23,7 @@ header {
 }
 
 .logo img {
-    width: 180px; /* Increased from 120px */
+    width: 120px;
 }
 
 .navbar {
@@ -47,7 +47,6 @@ header {
     border-radius: 5px;
 }
 
-
 /* Main Content */
 main {
     padding: 20px;
@@ -61,10 +60,10 @@ main {
 /* Slideshow Container */
 .slideshow-container {
     position: relative;
-    max-width: 1200px; 
-    height: 300px;     
+    max-width: 1200px;
+    height: 300px;
     margin: 20px auto;
-    overflow: hidden;  
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -77,9 +76,9 @@ main {
 
 .slide img {
     width: 100%;
-    height: 100%;     
-    object-fit: cover;  
-    display: block; 
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .prev,
@@ -115,7 +114,8 @@ main {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .slideshow-container {
-        height: 300px;  /* Smaller height on mobile */
+        height: 300px;
+        /* Smaller height on mobile */
     }
 }
 
@@ -1203,7 +1203,6 @@ footer {
 /********************************************
 /* add donate to the footer
 ********************************************/
-/* Footer Styles */
 footer {
     background-color: #646464;
     color: #ffffff;
@@ -1212,53 +1211,49 @@ footer {
     width: 100%;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .footer-sections {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
+    gap: 2rem;
 }
 
 .footer-donate {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
-.footer-donate img {
+.donate-img {
     height: 80px;
-    width: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.footer-donate img:hover {
+.donate-img:hover {
     transform: translateY(-2px);
-}
-
-.footer-info {
-    text-align: center;
-}
-
-.contact-info {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .footer-sections {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-donate img {
-        height: 60px;
-    }
 }
 
 /********************************************
@@ -1333,7 +1328,7 @@ footer {
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .news-card img {
@@ -1389,78 +1384,5 @@ footer {
 
     .main-article h1 {
         font-size: 24px;
-    }
-}
-
-/********************************************
-/* Footer Styling
-********************************************/
-footer {
-    background-color: #646464; /* Footer background */
-    color: #ffffff; /* Text color */
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column; /* Stacks donate and contact info for responsiveness */
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-sections {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-}
-
-.footer-donate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.footer-donate img {
-    height: 80px; /* Adjust logo height */
-    width: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.footer-donate img:hover {
-    transform: translateY(-2px);
-}
-
-.footer-info {
-    font-size: 14px; /* Footer text size */
-    text-align: center;
-}
-
-.contact-info a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .footer-sections {
-        flex-direction: column; /* Ensure proper stacking on smaller screens */
-        gap: 10px;
-    }
-
-    .footer-donate img {
-        height: 60px; /* Resize for mobile */
     }
 }
