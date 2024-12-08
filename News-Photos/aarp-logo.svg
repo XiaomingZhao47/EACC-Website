@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Background -->
+  <rect width="400" height="200" fill="#ffffff"/>
+  
+  <!-- AARP Text -->
+  <text x="50" y="100" font-family="Arial Black, sans-serif" font-size="80" fill="#e31837" font-weight="bold">AARP</text>
+  
+  <!-- Tax Prep Aide Text -->
+  <text x="50" y="160" font-family="Arial, sans-serif" font-size="40" fill="#e31837">TAX PREP AIDE</text>
+</svg>
